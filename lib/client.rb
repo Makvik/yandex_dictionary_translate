@@ -11,10 +11,10 @@ module YandexDictionaryTranslate
 
     def get_langs_update(lang = 'en')
       data = {"ui" => lang}
-      @langs = @connect.request('getLangs', data)
+      @langs = @connect.request('getLangs')
     end
 
-    def translate(text, lang = 'en-ru', format = 'plain')
+    def lookup(text, lang = 'en-ru', format = 'plain')
       data = {"text" => text, "lang" => lang, "format" => format}
       return @connect.request('lookup', data)
     end

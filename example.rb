@@ -1,5 +1,6 @@
-require 'yandex_dictionary_translate'
+require_relative 'lib/yandex_dictionary_translate'
 
+# Need Yandex Key
 key = ""
 
 yandex = YandexDictionaryTranslate::Client.new(key)
